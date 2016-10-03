@@ -31,4 +31,12 @@ public class Robot {
     public void setPosition(Position position) {
         this.position = position;
     }
+
+    public void turnLeft() {
+        position.setDirection(position.getDirection().getDirectionOnLeft());
+    }
+
+    public void turnRight() {
+        position.setDirection(position.getDirection().getDirectionOnRight());
+    }
 }
