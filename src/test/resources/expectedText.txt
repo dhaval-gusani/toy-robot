@@ -1,0 +1,25 @@
+Ignoring command LEFT, Robot is not on board
+Ignoring command RIGHT, Robot is not on board
+Ignoring command MOVE, Robot is not on board
+Ignoring command REPORT, Robot is not on board
+Ignoring command PLACE, Command requires position as parameters
+Ignoring command PLACE, No enum constant com.rea.test.models.Direction.north
+Ignoring command PLACE, Should pass 3 parameters for PLACE Command, [positionX, positionY, direction]
+Ignoring command PLACE, X Position should be between 0 and 4
+Robot placed at: Position[X: 1, Y: 2, Direction: EAST]
+Turned Left
+Moved
+Position[X: 1, Y: 3, Direction: NORTH]
+Moved
+Position[X: 1, Y: 4, Direction: NORTH]
+Ignoring command MOVE, new position after move is invalid
+Position[X: 1, Y: 4, Direction: NORTH]
+Ignoring command MOVE, new position after move is invalid
+Turned Right
+Moved
+Position[X: 2, Y: 4, Direction: EAST]
+Moved
+Ignoring command PLACE, Robot is already on the board at Position[X: 3, Y: 4, Direction: EAST]
+Position[X: 3, Y: 4, Direction: EAST]
+No enum constant com.rea.test.models.Command.SOME_COMMAND
+Position[X: 3, Y: 4, Direction: EAST]
