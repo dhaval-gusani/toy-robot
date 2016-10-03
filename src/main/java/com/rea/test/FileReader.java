@@ -13,8 +13,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Map;
+import java.util.Optional;
 
 import static com.rea.test.models.Command.PLACE;
+import static java.util.Optional.empty;
+import static java.util.Optional.of;
 
 public class FileReader {
 
@@ -54,11 +57,11 @@ public class FileReader {
 
     private void executeCommand(Robot robot, String commandStr) {
         String[] commandArray = commandStr.split(" ");
-        Command command = getCommand(commandArray[0]);
-        if (command == null) {
+        Optional<Command> command = getCommand(commandArray[0]);
+        if (!command.isPresent()) {
             return;
         }
-        switch (command) {
+        switch (command.get()) {
             case PLACE:
                 if (commandArray.length >= 2) {
                     commandHandlersWithParameters.get(PLACE).execute(robot, commandArray[1].split(","));
@@ -70,19 +73,19 @@ public class FileReader {
             case LEFT:
             case RIGHT:
             case REPORT:
-                commandHandlersWithoutParameters.get(command).execute(robot);
+                commandHandlersWithoutParameters.get(command.get()).execute(robot);
                 break;
             default:
-                System.out.println("Command " + command + " not yet implemented");
+                System.out.println("Command " + command.get() + " not yet implemented");
         }
     }
 
-    private Command getCommand(String name) {
+    private Optional<Command> getCommand(String name) {
         try {
-            return Command.valueOf(name);
+            return of(Command.valueOf(name));
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
-            return null;
+            return empty();
         }
     }
 

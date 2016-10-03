@@ -3,8 +3,8 @@ package com.rea.test.command;
 
 import com.rea.test.models.Command;
 
-import static com.rea.test.config.Constants.MAX_X_UNITS_ON_BOARD_STARTING_FROM_ZERO;
-import static com.rea.test.config.Constants.MAX_Y_UNITS_ON_BOARD_STARTING_FROM_ZERO;
+import static com.rea.test.Constants.MAX_X_UNITS_ON_BOARD_STARTING_FROM_ZERO;
+import static com.rea.test.Constants.MAX_Y_UNITS_ON_BOARD_STARTING_FROM_ZERO;
 
 public abstract class BaseCommandHandler {
 

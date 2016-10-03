@@ -24,7 +24,7 @@ public class Main {
         } else {
             System.out.println("Please provide valid filePath as commandLine argument");
         }
-        System.out.println("\n\n\nApplication finished");
+        System.out.println("\n\n\nApplication ended ......");
     }
 
     private boolean isValidFilePath(String[] args) {

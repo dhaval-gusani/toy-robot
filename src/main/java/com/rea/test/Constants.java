@@ -1,5 +1,5 @@
 
-package com.rea.test.config;
+package com.rea.test;
 
 public class Constants {
 
