@@ -17,11 +17,11 @@ Code Structure
 - A sample file is present in toy-robot/src/test/resources/testCommandFile.txt
 - Code is divided into 3 main modules
 
- # models: contains all the models
- # command: contains all the CommandHandlers (handlers to execute each commands)
+ # models
+ # command (Command Handlers)
     Each command handler can handle its own command, all validations regarding that command,
     all exception handling and error/result printing for that command
- # main: contains configuration constants, file reader & Main class
+ # main
     Contains a constant file that contains constants like max board size
     Contains a file reader that would read the file and invoke command handler according to the commands in file
     Contains a Main file, which is the executable file for this project
